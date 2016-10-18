@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title Profile
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    script(src='https://use.fontawesome.com/e5cb7ed628.js')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    style(type='text/css').
+      body{
+      }
+  body
+    .container
+      .page-header.text-center
+        h1
+          span.fa.fa-anchor
+          | Profile
+        a.btn.btn-default(href='/logout') Logout
+      .row
+        .col-lg-6.well
+          h1
+            span.fa.fa-user
+            | Local Profile Details
+          p
+            strong id !{user._id}
+            br
+            strong email !{user.local.email}
+            br
+            strong password !{user.local.password}
